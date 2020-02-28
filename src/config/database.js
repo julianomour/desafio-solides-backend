@@ -1,18 +1,10 @@
+import 'dotenv/config';
+
 module.exports = {
-  // dialect: 'postgres',
-  // host: 'localhost',
-  // username: 'postgres',
-  // password: 'solides',
-  // database: 'solidesDB',
-  // define: {
-  //   timestamps: true,
-  //   underscored: true,
-  //   underscoredAll: true,
-  // },
-  host: 'ec2-52-203-160-194.compute-1.amazonaws.com',
-  username: 'xkchfxywshtlbz',
-  password: '3855b775b52b99c74e9a1b1ba7b5cfaf7e35764eff902b4101f4dc26739ea6d5',
-  database: 'dev61e95334qcc',
+  host: process.env.HOST,
+  username: process.env.USERNAME,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE,
   dialect: 'postgres',
   dialectOptions: {
     ssl: true,
@@ -22,14 +14,4 @@ module.exports = {
     underscored: true,
     underscoredAll: true,
   },
-  // dialect: 'postgres',
-  // host: 'rajje.db.elephantsql.com',
-  // username: 'egwkebdi',
-  // password: 'efun-UMDXG7Ivrvkw5Zq5b_-XToVsacs',
-  // database: 'egwkebdi',
-  // define: {
-  //   timestamps: true,
-  //   underscored: true,
-  //   underscoredAll: true,
-  // },
 };
