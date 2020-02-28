@@ -6,6 +6,8 @@ Este projeto foi desenvolvido para fornecer um backend para a aplicação ReactJ
   - Postgres
   - Docker
 
+# .env
+Precisamos criar o arquivo .env com as variáveis de ambiente necessárias para executar a aplicação. O arquivo .env-example possui todas as varíaveis que devem ser utilizadas.
 
 ## Docker
 
