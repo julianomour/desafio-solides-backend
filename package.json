@@ -1,11 +1,11 @@
 {
   "name": "desafio-backend",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js",
-    "start": "babel-node -- src/server.js"
+    "dev": "nodemon src/index.js",
+    "start": "babel-node -- src/index.js"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
@@ -23,11 +23,7 @@
     "yup": "^0.28.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.6",
-    "@babel/node": "^7.8.4",
-    "@babel/preset-env": "^7.8.6",
-    "babel-cli": "^7.0.0",
+    "babel-cli": "^6.26.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.10.0",
