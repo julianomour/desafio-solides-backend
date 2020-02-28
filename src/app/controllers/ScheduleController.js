@@ -91,12 +91,6 @@ class ScheduleController {
       return res.status(401).json({ error: 'Horário já registrado hoje' });
     }
 
-    // if (!isToday(schedule.created_at)) {
-    //   return res.status(401).json({
-    //     error: 'Não foi possível registrar seu ponto, os horários não batem',
-    //   });
-    // }
-
     await schedule.update({ start_lunch: new Date() });
     return res.json({
       message: `Horário de início do intervalo registrado às ${schedule.start_lunch}`,
@@ -115,12 +109,6 @@ class ScheduleController {
     if (schedule.end_lunch) {
       return res.status(401).json({ error: 'Horário já registrado hoje' });
     }
-
-    // if (!isToday(schedule.created_at)) {
-    //   return res.status(401).json({
-    //     error: 'Não foi possível registrar seu ponto, os horários não batem',
-    //   });
-    // }
 
     await schedule.update({ end_lunch: new Date() });
     return res.json({

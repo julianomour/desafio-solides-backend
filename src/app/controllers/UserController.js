@@ -7,7 +7,7 @@ class UserController {
     const userExists = await User.findOne({ where: { email: req.body.email } });
 
     if (userExists) {
-      return res.status(400).json({ error: 'User already exists' });
+      return res.status(400).json({ error: 'Usuário já existe' });
     }
 
     const { id, name, email } = await User.create(req.body);
@@ -30,12 +30,12 @@ class UserController {
     if (email && email !== user.email) {
       const userExists = await User.findOne({ where: { email } });
       if (userExists) {
-        return res.status(400).json({ error: 'User already exists' });
+        return res.status(400).json({ error: 'Usuário já existe' });
       }
     }
 
     if (oldPassword && !(await user.checkPassword(oldPassword))) {
-      return res.status(401).json({ error: "Password doesn't match" });
+      return res.status(400).json({ error: 'Senha não bate' });
     }
 
     const { id, name } = await user.update(req.body);
